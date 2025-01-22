@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaleSmartly Chat SDK</title>
+    <style>
+        body {
+            display: flex;
+            place-items: center;
+            height: 100vh;
+        }
+
+        button {
+            border-radius: 8px;
+            border: 1px solid transparent;
+            padding: 0.6em 1.2em;
+            font-size: 1em;
+            font-weight: 500;
+            font-family: inherit;
+            background-color: #1a1a1a;
+            cursor: pointer;
+            transition: border-color 0.25s;
+            background-color: #f9f9f9;
+        }
+
+        button:hover {
+            border-color: #646cff;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="margin: 0 auto; text-align: center;">
+        <button onclick="window.ssq.push('chatOpen')">联系客服</button>
+        <button data-id="setLoginInfo">登录</button>
+        <button onclick="window.ssq.push('clearUser')">退出登录</button>
+        <button data-id="sendTextMessage">发送文字消息</button>
+    </div>
+
+    <!-- 替换成您的sdk -->
+    <script src="https://example.js"></script>
+
+    <script>
+        // 设置聊天插件图标隐藏，可配合打开窗口api实现自定义图标
+        window.__ssc.setting = { hideIcon: true };
+
+        // 监听消息发送事件
+        window.ssq.push('onSendMessage', obj => {
+            console.log('onSendMessage', obj);
+        });
+        // 打开聊天窗
+        window.ssq.push('onOpenChat', () => {
+            console.log('onOpenChat');
+        });
+        // 关闭聊天窗
+        window.ssq.push('onCloseChat', () => {
+            console.log('onCloseChat');
+        });
+
+        const handleLogin = () => {
+            window.ssq.push('setLoginInfo', {
+                user_id: '1vme37svub8', // 加密后的用户 id, 必填  对应用户的channel_uid
+                user_name: 'test', // 对应用户名
+                language: 'zh-CN', // 对应用户语言
+                phone: '17311112222', // 对应用户手机号
+                email: 'test@test', // 对应用户邮箱
+                description: '套餐B\n客户端\n收费客户', // 对应客户资料的用户描述信息，例如套餐信息
+                label_names: ['标签值1', '标签值2'], // 对应用户标签，仅支持传系统已创建的标签值
+            });
+        }
+
+        const handleSendTextMessage = () => {
+            // 先打开聊天窗
+            window.ssq.push('chatOpen')
+            setTimeout(() => {
+                window.ssq.push('sendTextMessage', '发送了一条文本消息');
+            }, 500)
+        }
+
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const id = button.getAttribute('data-id');
+                switch (id) {
+                    case 'setLoginInfo':
+                        handleLogin();
+                        break;
+                    case 'sendTextMessage':
+                        handleSendTextMessage();
+                        break;
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
