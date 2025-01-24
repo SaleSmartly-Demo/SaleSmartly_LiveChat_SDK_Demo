@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <!-- 替换成您的sdk -->
+    <script src="https://plugin-code.salesmartly.com/js/project_xxxxxxxxx.js"></script> 
+    <!--  给google上报chat_started事件 -->
+    <script type="text/javascript">
+        var isChatStarted = false;
+        ssq.push('onSendMessage', function (obj) {
+            if (!isChatStarted) {
+                isChatStarted = true;
+                gtag('event', 'chat_started');
+            }
+        }); 
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SaleSmartly Chat SDK</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/main.ts"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+
+   <!-- 替换成您的sdk -->
+   <script src="https://plugin-code.salesmartly.com/js/project_xxxxxxxxx.js"></script>
+
+  <script>
+    // 设置聊天插件图标隐藏，可配合打开窗口api实现自定义图标
+    window.__ssc.setting = { hideIcon: true };
+
+    // 给google上报chat_started事件
+    var isChatStarted = false;
+    window.ssq.push('onSendMessage', function (obj) {
+      if (!isChatStarted) {
+        isChatStarted = true;
+        gtag('event', 'chat_started');
+      }
+    }); 
+  </script>
+</body>
+
+</html>

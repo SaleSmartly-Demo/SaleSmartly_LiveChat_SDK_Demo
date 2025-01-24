@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <button data-id="img">关闭上传图片</button>
+        <button data-id="video">关闭上传视频</button>
+        <button data-id="document">关闭上传文件</button>
+    </div>
+
+    <!-- 替换成您的sdk -->
+    <script src="https://plugin-code.salesmartly.com/js/project_xxxxxxxxx.js"></script>
+
+    <script>
+        let hideLst = []
+
+        const hideFn = (list) => {
+            // 'img' 图片类型
+            // 'video' 视频类型
+            // 'document' 附件类型
+            window.ssq.push('hideUpload', list)
+        }
+
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(button => {
+            button.addEventListener('click', e => {
+                const id = button.getAttribute('data-id');
+                hideLst = [...hideLst, id]
+                hideFn(hideLst)
+            })
+        })
+    </script>
+</body>
+
+</html>

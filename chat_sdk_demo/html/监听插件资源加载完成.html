@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 替换成您的sdk -->
+    <script src="https://plugin-code.salesmartly.com/js/project_xxxxxxxxx.js"></script>
+
+    <script>
+        const ss_chat = document.getElementById('ss_chat');
+        ss_chat.addEventListener('load', (e) => {
+            window.ssq && window.ssq.push('onReady', () => {
+                console.log('onReady');
+            });
+        })
+    </script>
+</body>
+
+</html>
