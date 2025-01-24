@@ -42,6 +42,7 @@
    ```
 4. **chat_sdk_demo**
    该目录下存放聊天插件的使用demo
+   目录结构：
     ├── chat_sdk_demo/     # 聊天插件使用demo
     │   ├── html/          # html页面示例
     │   ├── vue/           # vue示例
