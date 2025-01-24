@@ -41,3 +41,15 @@
        </View>
    ```
 4. **chat_sdk_demo**
+   该目录下存放聊天插件的使用demo
+    ├── chat_sdk_demo/     # 聊天插件使用demo
+    │   ├── html/          # html页面示例
+    │   ├── vue/           # vue示例
+   
+   - html：直接运行相对应的文件即可
+   
+   - vue：进入到vue文件夹下，执行`pnpm install`，安装依赖，然后执行`pnpm dev`运行项目，更换sdk链接请到`index.html`中找对对应的sdk将 `src`替换
+     ```html
+        <!-- 替换成您的sdk -->
+        <script src="https://plugin-code.salesmartly.com/js/project_xxxxxxxxx.js"></script>
+     ```
