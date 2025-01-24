@@ -15,6 +15,7 @@
     <script type="text/javascript">
         var isChatStarted = false;
         ssq.push('onSendMessage', function (obj) {
+            // 记录该页面第一次发送消息事件
             if (!isChatStarted) {
                 isChatStarted = true;
                 gtag('event', 'chat_started');
