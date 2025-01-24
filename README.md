@@ -62,7 +62,7 @@
    
    - html：直接运行相对应的文件即可
    
-   - vue：进入到vue文件夹下，执行`pnpm install`，安装依赖，然后执行`pnpm dev`运行项目，更换sdk链接请到`index.html`中找对对应的sdk将 `src`替换
+   - vue：进入到vue文件夹下，执行`pnpm install`，安装依赖，然后执行`pnpm dev`运行项目，更换sdk链接请到`index.html`中找到对应的sdk将 `src`替换
      ```html
         <!-- 替换成您的sdk -->
         <script src="https://plugin-code.salesmartly.com/js/project_xxxxxxxxx.js"></script>
