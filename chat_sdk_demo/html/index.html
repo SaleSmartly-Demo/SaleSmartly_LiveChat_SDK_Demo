@@ -46,9 +46,14 @@
         // 设置聊天插件图标隐藏，可配合打开窗口api实现自定义图标
         window.__ssc.setting = { hideIcon: true };
 
+        var isChatStarted = false;
         // 监听消息发送事件
         window.ssq.push('onSendMessage', obj => {
-            console.log('onSendMessage', obj);
+            // 给google上报chat_started事件
+            if (!isChatStarted) {
+                isChatStarted = true;
+                gtag('event', 'chat_started');
+            }
         });
         // 打开聊天窗
         window.ssq.push('onOpenChat', () => {
