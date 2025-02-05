@@ -63,11 +63,11 @@
 
     ```
     <template>
-	<view class="content">
-		<web-view class="web-view" :src="web_url"></web-view>
-	</view>
+    <view class="content">
+        <web-view class="web-view" :src="web_url"></web-view>
+    </view>
     </template>
-
+    
     <script setup>
         import {
             ref
@@ -87,8 +87,15 @@
 
     │   ├── vue/           # vue示例
 
-   - html：直接运行相对应的文件即可
+   - html：直接运行相对应的文件即可，该目录包含：
 
+     - 关闭上传
+     - 监听插件资源加载完成
+     - 隐藏聊天窗内关闭按钮
+     - 自定义按钮
+     - ga上报
+     - index.html（示例汇总）
+   
    - vue：进入到vue文件夹下，执行`pnpm install`，安装依赖，然后执行`pnpm dev`运行项目，更换sdk链接请到`index.html`中找到对应的sdk将 `src`替换
      ```html
         <!-- 替换成您的sdk -->
