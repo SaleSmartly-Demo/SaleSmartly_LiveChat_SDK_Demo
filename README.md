@@ -1,4 +1,4 @@
-# SaleSmartly_Demo
+# SaleSmartly_LiveChat_SDK_Demo
 
 该项目主要存放一些使用插件的相关demo项目
 
