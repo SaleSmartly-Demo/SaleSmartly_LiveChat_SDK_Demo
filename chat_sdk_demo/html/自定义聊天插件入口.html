@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <!-- 2、自定义聊天插件入口 -->
+        <!-- 3、点击时，执行`window.ssq.push('chatOpen')`唤起聊天窗 -->
+        <button onclick="window.ssq.push('chatOpen')">打开聊天窗</button>
+    </div>
+
+    <!-- 替换成您的sdk -->
+    <script src="https://plugin-code.salesmartly.com/js/project_xxxxxxxxx.js"></script> 
+
+    <script>
+        /**
+         * 自定义聊天插件入口 demo
+         * 注意：此处的代码仅供参考，实际使用时请根据您的需求进行调整。
+         * 该 demo 作用：
+         * 一、根据自身需求隐藏聊天插件入口，自定义唤起聊天窗方式；
+         * 二、想要自定义实现聊天插件入口的样式或者实现拖动效果；
+         *
+         * SaleSmartly 团队当前还未支持自定义聊天插件入口的样式或者支持拖动，但推荐通过以下方式实现：
+         * 1、设置聊天插件图标隐藏（window.__ssc.setting = { hideIcon: true };）
+         * 2、自定义聊天插件入口（自己完成代码实现）
+         * 3、借助 push 事件唤起聊天窗（window.ssq.push('chatOpen')）
+         */
+        // 1、在聊天插件加载完成后，执行`window.__ssc.setting = { hideIcon: true };`，进行聊天插件入口隐藏
+        window.__ssc.setting = { hideIcon: true };
+    </script>
+    
+</body>
+</html>
