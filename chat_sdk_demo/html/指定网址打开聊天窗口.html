@@ -8,7 +8,8 @@
 </head>
 
 <body>
-    <script defer id="ss_chat" src="https://plugin-code.salesmartly.com/js/project_574_820_1750817048.js"></script>
+    <!-- 替换成您的sdk -->
+    <script defer id="ss_chat" src="https://plugin-code.salesmartly.com/js/project_xxxxxxxxx.js"></script>
 
     <script>
         /**
@@ -36,12 +37,12 @@
             }
         }
 
-        // sdk资源加载完成，再打开聊天窗，避免未加载完成时调用ssq.push('chatOpen')报错
+        // sdk资源加载完成，再打开聊天窗，避免未加载完成时调用导致报错
         const ss_chat = document.getElementById('ss_chat');
         ss_chat.addEventListener('load', (e) => {
             window.ssq && window.ssq.push('onReady', () => {
 
-                // 页面加载完成后，立即执行一次判断
+                // 页面加载完成后，可立即执行一次判断
                 hrefChange();
 
                 // 监听页面 URL 变化，根据具体场景来实现，例如：
