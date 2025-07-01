@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 替换成您的sdk -->
+    <script defer id="ss_chat" src="https://plugin-code.salesmartly.com/js/project_xxxxxxxxx.js"></script>
+
+    <script>
+        /**
+         * 注意：此处的代码仅供参考，实际使用时请根据您的需求进行调整。
+         * 该 demo 作用：
+         * 指定网址打开聊天窗口，可实现用户到指定页面时，自动打开聊天窗口。
+         */
+
+        // 需要展示聊天窗口的URL列表，例如：
+        const showPluginHrefList = [
+            'https://example.com/chat',
+            'https://example.com/shop',
+            'https://example.com/fee',
+        ]
+
+        // 处理URL变化
+        function hrefChange() {
+            // 获取当前页面 URL
+            const currentHref = window.location.href;
+            // 判断当前页面 URL 是否在需要展示聊天窗口的网址列表中
+            // 可根据自身业务场景，调整为完全匹配或模糊匹配
+            if (showPluginHrefList.includes(currentHref)) {
+                // 打开聊天窗口
+                window.ssq.push('chatOpen');
+            }
+        }
+
+        // sdk资源加载完成，再打开聊天窗，避免未加载完成时调用导致报错
+        const ss_chat = document.getElementById('ss_chat');
+        ss_chat.addEventListener('load', (e) => {
+            window.ssq && window.ssq.push('onReady', () => {
+
+                // 页面加载完成后，可立即执行一次判断
+                hrefChange();
+
+                // 监听页面 URL 变化，根据具体场景来实现，例如：
+                window.addEventListener('pushState', hrefChange);
+                window.addEventListener('replaceState', hrefChange);
+            });
+        })
+    </script>
+</body>
+
+</html>
