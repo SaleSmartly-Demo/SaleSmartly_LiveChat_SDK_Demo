@@ -20,6 +20,21 @@ APK 信息：
 
 Android 设备下载后如提示禁止安装未知来源应用，请在系统设置中允许当前浏览器或文件管理器安装 APK。
 
+## SDK AAR 下载
+
+[点击下载 SDK AAR](https://raw.githubusercontent.com/SaleSmartly-Demo/SaleSmartly_LiveChat_SDK_Demo/refs/heads/codex/add-chat-android-demo/chat_android/sdk/salesmartly-chatwidget-sdk-v0.1.0.aar)
+
+AAR 信息：
+
+| 字段 | 值 |
+| --- | --- |
+| 文件 | `chat_android/sdk/salesmartly-chatwidget-sdk-v0.1.0.aar` |
+| Maven 坐标 | `com.salesmartly:chatwidget-sdk:0.1.0` |
+| minSdk | `23` |
+| 构建类型 | `release` |
+| 文件大小 | `1500413` bytes |
+| SHA-256 | `af5064a3546addc6496f57d837b2ec85a06df4fd011f28aadf92a2a77b36075f` |
+
 ## 1. 添加 SDK 依赖
 
 正式接入推荐通过 Maven 依赖引入 SDK：
@@ -30,11 +45,11 @@ dependencies {
 }
 ```
 
-如果临时使用本地 AAR，可以把 `chatwidget-sdk-release.aar` 放入宿主 App 的 `libs` 目录：
+如果临时使用本地 AAR，可以下载上方 `salesmartly-chatwidget-sdk-v0.1.0.aar`，放入宿主 App 的 `libs` 目录：
 
 ```kotlin
 dependencies {
-    implementation(files("libs/chatwidget-sdk-release.aar"))
+    implementation(files("libs/salesmartly-chatwidget-sdk-v0.1.0.aar"))
 }
 ```
 
