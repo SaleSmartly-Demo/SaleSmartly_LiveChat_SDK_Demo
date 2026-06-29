@@ -103,7 +103,7 @@
 
    可直接下载 Demo APK 安装体验：
 
-   [点击下载 Android Demo APK](chat_android/apk/salesmartly-chat-android-demo-v1.0.0.apk?raw=1)
+   [点击下载 Android Demo APK](https://raw.githubusercontent.com/SaleSmartly-Demo/SaleSmartly_LiveChat_SDK_Demo/refs/heads/codex/add-chat-android-demo/chat_android/apk/salesmartly-chat-android-demo-v1.0.0.apk)
 
    接入说明请查看 `chat_android/README.md`，包含 SDK 依赖、脚本地址注入、初始化、Compose/View 挂载、用户信息、常用命令、回调和权限说明。
 
