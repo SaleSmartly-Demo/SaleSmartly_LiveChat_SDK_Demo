@@ -97,7 +97,17 @@
      <!-- 替换成您的sdk -->
         <script src="https://plugin-code.salesmartly.com/js/project_xxxxxxxxx.js"></script>
      ```
-6. **nativeapp_vue_webview**
+6. **chat_android**
+
+   该目录下存放 SaleSmartly Chat Android 原生 SDK Demo APK 和详细接入文档。
+
+   可直接下载 Demo APK 安装体验：
+
+   [点击下载 Android Demo APK](https://raw.githubusercontent.com/SaleSmartly-Demo/SaleSmartly_LiveChat_SDK_Demo/main/chat_android/apk/salesmartly-chat-android-demo-v1.0.0.apk)
+
+   接入说明请查看 `chat_android/README.md`，包含 SDK 依赖、脚本地址注入、初始化、Compose/View 挂载、用户信息、常用命令、回调、环境识别和权限说明。
+
+7. **nativeapp_vue_webview**
    该文件夹为Native-Script-vue框架项目。
 
    推荐使用vs code编辑器打开，进入nativeapp_vue_webview文件夹下执行`npm install`或`yarn`，安装依赖包，然后执行`ns run ios 或 ns run andriod `运行项目。
@@ -119,4 +129,3 @@
         </Page>
     </Frame>
    ```
-
