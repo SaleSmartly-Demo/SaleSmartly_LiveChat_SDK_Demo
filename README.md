@@ -105,7 +105,7 @@
 
    [点击下载 Android Demo APK](https://raw.githubusercontent.com/SaleSmartly-Demo/SaleSmartly_LiveChat_SDK_Demo/main/chat_android/apk/salesmartly-chat-android-demo-v1.0.0.apk)
 
-   接入说明请查看 `chat_android/README.md`，包含 SDK 依赖、脚本地址注入、初始化、Compose/View 挂载、用户信息、常用命令、回调、环境识别和权限说明。
+   接入说明请查看 `chat_android/README.md`，包含 SDK 依赖、脚本地址注入、初始化、Compose/View 挂载、用户信息、常用命令、回调和权限说明。
 
 7. **nativeapp_vue_webview**
    该文件夹为Native-Script-vue框架项目。

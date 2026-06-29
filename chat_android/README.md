@@ -218,19 +218,7 @@ SalesmartlyChat.push("onOpenCustom", SalesmartlyCallback { payload ->
 
 支持的回调包括：`onReady`、`onUnRead`、`onSendMessage`、`onReceiveMessage`、`onOpenChat`、`onCloseChat`、`onOpenCollection`、`onCollectionInfo`、`onOverTime`、`onOpenCustom`、`setExclusiveLink`、`onOpenLine`、`onOpenMessenger`、`onOpenEmail`、`onOpenTelegram`、`onOpenWhatsapp`、`onOpenInstagram`、`onOpenTikTok`、`onOpenVKontakte`、`onOpenZalo`、`onOpenWeixin`。
 
-## 8. 运行环境识别
-
-脚本 URL 由宿主打包或运行时配置传入。SDK 下载脚本后会解析 `__ssc.license`，并根据脚本里的 install 路径识别服务环境：
-
-| install 路径 | 服务环境 |
-| --- | --- |
-| `/chat/widget-v2/dev/install.js` | dev |
-| `/chat/widget-v2/pre/install.js` | pre |
-| 其它 install 路径 | 正式环境 |
-
-聊天运行模式由 `SalesmartlySetting.mode` 控制，默认是 `chat`，也支持 `demo`、`preview`、`sandbox`、`exclusiveLink` 等 Web 对齐模式。
-
-## 9. 权限说明
+## 8. 权限说明
 
 宿主 App 需要网络权限：
 
