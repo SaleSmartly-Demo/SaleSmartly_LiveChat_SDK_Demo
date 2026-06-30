@@ -4,7 +4,7 @@
 
 ## Demo APK 下载
 
-[点击下载 Demo APK](https://raw.githubusercontent.com/SaleSmartly-Demo/SaleSmartly_LiveChat_SDK_Demo/refs/heads/codex/add-chat-android-demo/chat_android/apk/salesmartly-chat-android-demo-v1.0.0.apk)
+[点击下载 Demo APK](https://raw.githubusercontent.com/SaleSmartly-Demo/SaleSmartly_LiveChat_SDK_Demo/main/chat_android/apk/salesmartly-chat-android-demo-v1.0.0.apk)
 
 APK 信息：
 
@@ -16,13 +16,13 @@ APK 信息：
 | versionCode | `1` |
 | minSdk | `23` |
 | 构建类型 | `debug` |
-| SHA-256 | `31f9480340e4b170c03fa2b436163ccbe8ea40146448b2b6ce72c7567bb657c3` |
+| SHA-256 | `7e2a9490497cf8e356e58b55411797d29512202718bec2bf08bcddc9b1c18070` |
 
 Android 设备下载后如提示禁止安装未知来源应用，请在系统设置中允许当前浏览器或文件管理器安装 APK。
 
 ## SDK AAR 下载
 
-[点击下载 SDK AAR](https://raw.githubusercontent.com/SaleSmartly-Demo/SaleSmartly_LiveChat_SDK_Demo/refs/heads/codex/add-chat-android-demo/chat_android/sdk/salesmartly-chatwidget-sdk-v0.1.0.aar)
+[点击下载 SDK AAR](https://raw.githubusercontent.com/SaleSmartly-Demo/SaleSmartly_LiveChat_SDK_Demo/main/chat_android/sdk/salesmartly-chatwidget-sdk-v0.1.0.aar)
 
 AAR 信息：
 
@@ -32,8 +32,8 @@ AAR 信息：
 | Maven 坐标 | `com.salesmartly:chatwidget-sdk:0.1.0` |
 | minSdk | `23` |
 | 构建类型 | `release` |
-| 文件大小 | `1500413` bytes |
-| SHA-256 | `af5064a3546addc6496f57d837b2ec85a06df4fd011f28aadf92a2a77b36075f` |
+| 文件大小 | `1500493` bytes |
+| SHA-256 | `a774daac42592a84d9ff8aad5e491f0d11abd94add72fa3407de261465f84cf3` |
 
 ## 1. 添加 SDK 依赖
 
